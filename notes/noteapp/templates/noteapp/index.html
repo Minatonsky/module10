@@ -28,7 +28,7 @@
     {% for note in notes %}
     <ul>
         <li>{{ note.quote }}</li>
-        <li>Author: {{ note.author.fullname }}</li>
+        <li>Author: <a href="{% url 'noteapp:author_detail' note.author.pk %}">{{ note.author.fullname }}</a></li>
     </ul>
     {% endfor %}
 </main>

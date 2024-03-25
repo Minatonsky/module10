@@ -8,5 +8,5 @@ urlpatterns = [
     path('note/', views.note, name='note'),
     path('tag/', views.tag, name='tag'),
     path('author/', views.author, name='author'),
-    path('author_detail/<int:author_id>/', views.author_detail, name='author_detail'),
+    path('author/<int:author_id>/', views.author_detail, name='author_detail'),
 ]

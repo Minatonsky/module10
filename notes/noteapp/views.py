@@ -5,9 +5,6 @@ from .forms import TagForm, NoteForm, Tag, Note, AuthorForm
 from .models import Author
 
 
-#from .templateauthors.extract_authors import authors
-
-
 # Create your views here.
 def main(request):
     notes = Note.objects.all()
