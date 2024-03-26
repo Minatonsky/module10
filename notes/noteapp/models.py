@@ -2,7 +2,6 @@ from django.db import models
 from django.contrib.auth.models import User
 
 
-# Create your models here.
 class Tag(models.Model):
     name = models.CharField(max_length=25, null=False)
     user = models.ForeignKey(User, on_delete=models.CASCADE, default=1)
@@ -28,8 +27,8 @@ class Author(models.Model):
 
 
 class Note(models.Model):
-    quote = models.CharField(max_length=150, null=False)
-    tags = models.CharField(max_length=150, blank=True)
+    quote = models.CharField(null=False)
+    tags = models.CharField(blank=True)
     author = models.ForeignKey(Author, on_delete=models.CASCADE)
     user = models.ForeignKey(User, on_delete=models.CASCADE, default=1)
 
